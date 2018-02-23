@@ -115,7 +115,7 @@ setListSpec <- function(obj, ..., replace) {
   } else {
     args <- list(args)
   }
-      print(args)
+ 
   # Convert data values to a list (fixes issue 138)
   args <- lapply(args, function(x) {
 
