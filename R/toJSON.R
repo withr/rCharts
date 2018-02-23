@@ -75,6 +75,7 @@ toObj <- function(x){
 }
 
 toJSON2 <- function(x, ...){
+  print(x)
   container_ = is.list(x) || (length(x) > 1)
   toObj(toJSON(x, .escapeEscapes = F, container = container_, ...))
 }
