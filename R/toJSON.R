@@ -30,6 +30,7 @@ toJSONArray <- function(obj, json = TRUE, nonames = TRUE){
 }
 
 toJSONArray2 <- function(obj, json = TRUE, names = TRUE, ...){
+  print(obj)
   value = lapply(1:nrow(obj), function(i) {
     res <- as.list(obj[i, ])
     if (!names) names(res) <- NULL  # remove names (e.g. {x = 1, y = 2} => {1, 2})
@@ -41,6 +42,7 @@ toJSONArray2 <- function(obj, json = TRUE, names = TRUE, ...){
     names(value) <- NULL;
     return(value)
   }
+  print(value)
 }
 
 #' Converts an R list to a sequence of chained functions acting on a specified object.
