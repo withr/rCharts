@@ -107,7 +107,7 @@ is.categorical <- function(x) is.factor(x) || is.character(x)
 # Custom setSpec method that also accepts list as an argument
 # - for series, xAxis and yAxis
 setListSpec <- function(obj, ..., replace) {
-    print(obj)
+
   args <- list(...)
   
   if (length(args) == 1 && is.list(args[[1]]) && is.null(names(args))) {
@@ -115,7 +115,7 @@ setListSpec <- function(obj, ..., replace) {
   } else {
     args <- list(args)
   }
-  
+      print(args)
   # Convert data values to a list (fixes issue 138)
   args <- lapply(args, function(x) {
 
