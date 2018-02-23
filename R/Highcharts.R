@@ -120,6 +120,7 @@ setListSpec <- function(obj, ..., replace) {
     if (!is.null(x$data) && !is.list(x$data)){ 
       x$data <- as.list(x$data)
     }
+      print(x$data)
     return(x)
   })
   
