@@ -117,8 +117,7 @@ setListSpec <- function(obj, ..., replace) {
   
   # Convert data values to a list (fixes issue 138)
   args <- lapply(args, function(x) {
-      print(x)
-      print(x$data)
+
     if (!is.null(x$data) && !is.list(x$data)){ 
       x$data <- as.list(x$data)
     }
