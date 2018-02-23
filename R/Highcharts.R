@@ -14,7 +14,10 @@ Highcharts <- setRefClass("Highcharts", contains = "rCharts", methods = list(
         # Set params before rendering
         params$chart$renderTo <<- chartId
 
-        list(chartParams = toJSON2(params, digits = 13), chartId = chartId)
+        # list(chartParams = toJSON2(params, digits = 13), chartId = chartId)
+        # set digits = 13 will convert some digit to wired value
+        # e.g. 3.1 will be converted to 3.09999999
+        list(chartParams = toJSON2(params), chartId = chartId)
     },
 
     #' Wrapper methods
